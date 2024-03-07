@@ -1,0 +1,70 @@
+baseURL = 'https://cdndictionary.org/'
+languageCode = 'en-us'
+title = 'CDN Dictionary'
+theme = "PaperMod"
+paginate = 20
+enableRobotsTXT = true
+
+[taxonomies]
+    category = 'categories'
+    tag = 'tags'
+
+[minify]
+    disableXML = true
+    # minifyOutput = true
+
+[[menu.main]]
+identifier = "search"
+name = "search"
+url = "/search/"
+weight = 5
+
+# [[menu.main]]
+# identifier = "terms"
+# name = "terms"
+# url = "/terms/"
+# weight = 10
+
+[[menu.main]]
+identifier = "tags"
+name = "tags"
+url = "/tags/"
+weight = 20
+
+[[menu.main]]
+identifier = "CDN Alliance"
+name = "cdnlliance.org"
+url = "https://cdnalliance.org"
+weight = 30
+
+[outputs]
+    home = ['html', 'rss', 'json']
+
+[params]
+    env = "production"
+    title = "CDN Dictionary"
+    description = "The CDN Dictionary is a joint effort WorkingGroup by the CDN Alliance together with Tinify, Benocs and jsDelivr"
+    keywords = ["CDN", "Dictionary", "Content Delivery Network", "Glossary", "Terms", "Handbook"]
+    showtoc = true
+    ShowBreadCrumbs = true
+    mainSections = ["terms"]
+
+    [[socialIcons]]
+        name = "LinkedIn"
+        url = "https://www.linkedin.com/company/cdnallianceorg/"
+    [editPost]
+        url = "https://github.com/cdnalliance/wg-dictionary/content"
+        text = "Suggest Changes"
+        appendFilePath = true
+    [homeInfoParams]
+        title = "CDN Dictionary"
+        content = "Hello welcome to the Content Delivery Network Dictionary homepage"
+    [fuseOpts]
+        isCaseSensitive = false
+        shouldSort = true
+        location = 0
+        distance = 1_000
+        threshold = 0.4
+        minMatchCharLength = 0
+        limit = 10
+        keys = [ "title", "permalink", "summary", "content" ]
