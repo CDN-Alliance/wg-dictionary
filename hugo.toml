@@ -6,7 +6,7 @@ paginate = 20
 enableRobotsTXT = true
 
 [taxonomies]
-    category = 'categories'
+    term = 'terms'
     tag = 'tags'
 
 [minify]
@@ -19,11 +19,11 @@ name = "search"
 url = "/search/"
 weight = 5
 
-# [[menu.main]]
-# identifier = "terms"
-# name = "terms"
-# url = "/terms/"
-# weight = 10
+[[menu.main]]
+identifier = "terms"
+name = "terms"
+url = "/terms/"
+weight = 10
 
 [[menu.main]]
 identifier = "tags"

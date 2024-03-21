@@ -2,6 +2,7 @@
 title: "Example Term"
 date: 2022-05-20
 tags: ["Edge", "Under Discussion"]
+terms: ["Example Term"]
 categories: ["General Terms"]
 cdns: ["Akamai", "CloudFront"]
 status: "Under Discussion"
