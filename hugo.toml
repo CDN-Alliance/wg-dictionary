@@ -4,6 +4,8 @@ title = 'CDN Dictionary'
 theme = "PaperMod"
 paginate = 20
 enableRobotsTXT = true
+enableEmoji = true
+mainSections = ["terms"]
 
 [taxonomies]
     term = 'terms'
@@ -40,31 +42,54 @@ weight = 30
 [outputs]
     home = ['html', 'rss', 'json']
 
-[params]
-    env = "production"
-    title = "CDN Dictionary"
-    description = "The CDN Dictionary is a joint effort WorkingGroup by the CDN Alliance together with Tinify, Benocs and jsDelivr"
-    keywords = ["CDN", "Dictionary", "Content Delivery Network", "Glossary", "Terms", "Handbook"]
-    showtoc = true
-    ShowBreadCrumbs = true
-    mainSections = ["terms"]
+[Params]
+env = "production"
+title = "CDN Dictionary"
+description = "The CDN Dictionary is a joint effort WorkingGroup by the CDN Alliance together with Tinify, Benocs and jsDelivr"
+author = "CDN Alliance"
+keywords = ["CDN", "Dictionary", "Content Delivery Network", "Glossary", "Terms", "Handbook"]
+showtoc = true
+ShowBreadCrumbs = true
+defaultTheme = "auto"
 
-    [[socialIcons]]
-        name = "LinkedIn"
-        url = "https://www.linkedin.com/company/cdnallianceorg/"
-    [editPost]
-        url = "https://github.com/cdnalliance/wg-dictionary/content"
-        text = "Suggest Changes"
-        appendFilePath = true
-    [homeInfoParams]
-        title = "CDN Dictionary"
-        content = "Hello welcome to the Content Delivery Network Dictionary homepage"
-    [fuseOpts]
-        isCaseSensitive = false
-        shouldSort = true
-        location = 0
-        distance = 1_000
-        threshold = 0.4
-        minMatchCharLength = 0
-        limit = 10
-        keys = [ "title", "permalink", "summary", "content" ]
+  [Params.profileMode]
+  enabled = false
+  title = "PaperMod"
+  imageUrl = "#"
+  imageTitle = "my image"
+
+[Params.homeInfoParams]
+Title = "CDN Dictionary"
+Content = """
+
+Welcome to the CDN Dictionary by the [CDN Alliance](https://cdnalliance.org/), supported by [Tinify](https://tinify.com), [Benocs](https://benocs.com), and [jsDelivr](https://jsdelivr.com). 
+
+This is your go-to resource for clear CDN terms and definitions. We've created it to help everyone, from newbies to experts, understand CDN jargon easily.
+
+
+Join us in expanding this resource by collaborating on our [GitHub](https://github.com/cdn-Alliance/wg-dictionary/).
+"""
+    [[Params.socialIcons]]
+    name = "LinkedIn"
+    url = "https://www.linkedin.com/company/cdnallianceorg/"
+
+    [[Params.socialIcons]]
+    name = "Github"
+    url = "https://github.com/cdn-Alliance/wg-dictionary/"
+
+
+    [Params.editPost]
+    URL = "https://github.com/cdnalliance/wg-dictionary/content"
+    text = "Suggest Changes"
+    appendFilePath = true
+    disabled = false
+
+[fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1_000
+    threshold = 0.4
+    minMatchCharLength = 0
+    limit = 10
+    keys = [ "title", "permalink", "summary", "content" ]
