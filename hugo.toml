@@ -79,7 +79,7 @@ Join us in expanding this resource by collaborating on our [GitHub](https://gith
 
 
     [Params.editPost]
-    URL = "https://github.com/cdnalliance/wg-dictionary/content"
+    URL = "https://github.com/CDN-Alliance/wg-dictionary/content"
     text = "Suggest Changes"
     appendFilePath = true
     disabled = false
